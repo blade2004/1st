@@ -1,0 +1,43 @@
+lstrip([chars]) 截掉字符串左边的空格或指定字符。
+rstrip([chars]) 删除字符串末尾的空格或指定字符。
+strip([chars]) 在字符串上执行lstrip()和rstrip()。
+
+
+find(str, beg=0, end=len(string)) 检测 str 是否包含在字符串中，如果指定范围 beg 和 end，则检查是否包含在指定范围内，如果包含，返回开始的索引值，否则返回 -1。
+rfind(str, beg=0,end=len(string)) 类似于 find() 函数，不过是从右边开始查找。
+
+replace(old, new [, max]) 把 将字符串中的old替换成new，如果max指定，则替换不超过max次。
+
+split(str="", num) 不带参数默认是以空格为分隔符切片字符串，如果num参数有设置，则仅分隔num个子字符串，返回切片后的子字符串拼接的列表。
+
+splitlines([keepends]) 按照行('\r', '\r\n', \n')分隔，返回一个包含各行作为元素的列表，如果参数keepends为 False，不包含换行符，如果为 True，则保留换行符。
+
+
+format 格式化函数
+【例子】
+
+str = "{0} Love {1}".format('I', 'Lsgogroup')  # 位置参数
+print(str)  # I Love Lsgogroup
+
+str = "{a} Love {b}".format(a='I', b='Lsgogroup')  # 关键字参数
+print(str)  # I Love Lsgogroup
+
+str = "{0} Love {b}".format('I', b='Lsgogroup')  # 位置参数要在关键字参数之前
+print(str)  # I Love Lsgogroup
+
+str = '{0:.2f}{1}'.format(27.658, 'GB')  # 保留小数点后两位
+print(str)  # 27.66GB
+Python 字符串格式化符号
+符 号	描述
+%c	格式化字符及其ASCII码
+%s	格式化字符串，用str()方法处理对象
+%r	格式化字符串，用rper()方法处理对象
+%d	格式化整数
+%o	格式化无符号八进制数
+%x	格式化无符号十六进制数
+%X	格式化无符号十六进制数（大写）
+%f	格式化浮点数字，可指定小数点后的精度
+%e	用科学计数法格式化浮点数
+%E	作用同%e，用科学计数法格式化浮点数
+%g	根据值的大小决定使用%f或%e
+%G	作用同%g，根据值的大小决定使用%f或%E
