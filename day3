@@ -1,0 +1,21 @@
+try-except-else语句尝试查询不在dict中的键值对，从而引发了异常。这一异常准确地说应属于KeyError，但由于KeyError是LookupError的子类，且将LookupError置于KeyError之前，因此程序优先执行该except代码块。所以，使用多个except代码块时，必须坚持对其规范排序，要从最具针对性的异常到最通用的异常。
+一个 except 子句可以同时处理多个异常，这些异常将被放在一个括号里成为一个元组。
+
+
+try - except - finally 语句
+try:
+    检测范围
+except Exception[as reason]:
+    出现异常后的处理代码
+finally:
+    无论如何都会被执行的代码
+不管try子句里面有没有发生异常，finally子句都会执行。
+
+如果一个异常在try子句里被抛出，而又没有任何的except把它截住，那么这个异常会在finally子句执行后被抛出。
+
+
+5. try - except - else 语句
+如果在try子句执行时没有发生异常，Python将执行else语句后的语句。
+
+6. raise语句
+Python 使用raise语句抛出一个指定的异常。
