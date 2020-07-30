@@ -1,0 +1,14 @@
+那么如何快速判断一个数据类型 X 是不是可变类型的呢？两种方法：
+
+麻烦方法：用 id(X) 函数，对 X 进行某种操作，比较操作前后的 id，如果不一样，则 X 不可变，如果一样，则 X 可变。
+便捷方法：用 hash(X)，只要不报错，证明 X 可被哈希，即不可变，反过来不可被哈希，即可变。
+
+dict(mapping) new dictionary initialized from a mapping object's (key, value) pairs
+【例子】
+
+dic1 = dict([('apple', 4139), ('peach', 4127), ('cherry', 4098)])
+print(dic1)  # {'cherry': 4098, 'apple': 4139, 'peach': 4127}
+
+dic2 = dict((('apple', 4139), ('peach', 4127), ('cherry', 4098)))
+print(dic2)  # {'peach': 4127, 'cherry': 4098, 'apple': 4139}
+
